@@ -21,6 +21,7 @@ const App: FC = () => {
       <a
         className={styles.avatarWrapper}
         href={`http://${VITE_ADDRESS}:${VITE_PORT}`}
+        title='Go to DSM'
       >
         <img
           alt='avatar'

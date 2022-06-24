@@ -14,6 +14,7 @@ const StreetLight: FC<IStreetLightProps> = (props) => {
     <a
       className={styles.wrapper}
       href={`http://${import.meta.env.VITE_ADDRESS}${to}`}
+      title={description}
     >
       <img
         className={styles.image}
