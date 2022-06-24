@@ -6,10 +6,15 @@
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #ececec;
+  }
 
   &:hover .description {
     color: #569cba;
-    transition: all 0.3s;
   }
 
   .image {
@@ -30,5 +35,6 @@
       family: 'PingFang SC', -apple-system, 'Segoe UI', 'Microsoft YaHei',
         sans-serif !important;
     }
+    transition: color 0.3s;
   }
 }
