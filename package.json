@@ -18,7 +18,6 @@
     "style:watch": "pnpm typed-scss-modules src --watch --ignore \"**/index.scss\""
   },
   "dependencies": {
-    "@douyinfe/semi-ui": "^2.12.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "sass": "^1.52.1"
