@@ -4,6 +4,7 @@ import StreetLight from '@/components/StreetLight';
 import styles from './index.module.scss';
 import Avatar from '/avatar.webp';
 import { streetLightConfig } from './config';
+import ReloadPrompt from '@/components/ReloadPrompt';
 
 const App: FC = () => {
   const { VITE_PORT, VITE_ADDRESS } = import.meta.env;
@@ -36,6 +37,7 @@ const App: FC = () => {
           <StreetLight key={index} {...config} />
         ))}
       </div>
+      <ReloadPrompt />
     </div>
   );
 };
