@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import useTypeWriter from 'react-typewriter-hook';
-import StreetLight from '@/components/StreetLight';
+import StreetLight from '@/components/street-light';
 import styles from './index.module.scss';
 import Avatar from '/avatar.webp';
 import { streetLightConfig } from './config';
+import ReloadPrompt from '@/components/reload-prompt';
 
 const App: FC = () => {
   const { VITE_PORT, VITE_ADDRESS } = import.meta.env;
@@ -36,6 +37,7 @@ const App: FC = () => {
           <StreetLight key={index} {...config} />
         ))}
       </div>
+      <ReloadPrompt />
     </div>
   );
 };
