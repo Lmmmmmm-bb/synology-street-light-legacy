@@ -37,7 +37,7 @@ export default defineConfig({
   plugins: [react(), vitePWA(pwaOptions)],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
+      '~': resolve(__dirname, 'src')
     }
   }
 });
