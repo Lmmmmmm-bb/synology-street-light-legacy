@@ -2,6 +2,7 @@
   "name": "synology-street-light",
   "private": true,
   "version": "0.0.1",
+  "packageManager": "pnpm@7.11.0",
   "license": "MIT",
   "author": {
     "email": "lmmmmmm12138@gmail.com",

@@ -1,9 +1,10 @@
 import { FC } from 'react';
+
 import Avatar from '/avatar.webp';
-import styles from './index.module.scss';
 import StreetLight from '~/components/street-light';
 import ReloadPrompt from '~/components/reload-prompt';
 
+import styles from './index.module.scss';
 import { streetLightConfig } from './config';
 
 const App: FC = () => {

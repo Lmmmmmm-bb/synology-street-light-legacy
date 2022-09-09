@@ -1,7 +1,7 @@
-import Download from '/download.svg';
+import Video from '/video.svg';
 import Folder from '/folder.svg';
 import Photos from '/photos.svg';
-import Video from '/video.svg';
+import Download from '/download.svg';
 
 export const streetLightConfig = [
   { src: Download, description: 'Download Station', to: '/download' },

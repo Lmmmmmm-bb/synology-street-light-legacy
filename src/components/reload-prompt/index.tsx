@@ -1,4 +1,6 @@
+import { FC } from 'react';
 import { useRegisterSW } from 'virtual:pwa-register/react';
+
 import styles from './index.module.scss';
 
 const UPDATE_SW_MS = 30 * 24 * 60 * 60 * 1000;
