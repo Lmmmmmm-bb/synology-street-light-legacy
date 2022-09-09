@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { useRegisterSW } from 'virtual:pwa-register/react';
 import styles from './index.module.scss';
 

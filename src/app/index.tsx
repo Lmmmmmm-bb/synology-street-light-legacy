@@ -1,10 +1,10 @@
-import { FC, useEffect, useState } from 'react';
-import useTypeWriter from 'react-typewriter-hook';
-import StreetLight from '~/components/street-light';
-import styles from './index.module.scss';
+import { FC } from 'react';
 import Avatar from '/avatar.webp';
-import { streetLightConfig } from './config';
+import styles from './index.module.scss';
+import StreetLight from '~/components/street-light';
 import ReloadPrompt from '~/components/reload-prompt';
+
+import { streetLightConfig } from './config';
 
 const App: FC = () => {
   const { VITE_PORT, VITE_ADDRESS } = import.meta.env;
