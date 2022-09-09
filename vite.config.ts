@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import AutoImport from 'unplugin-auto-import/vite';
 import { VitePWA as vitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 
 const pwaOptions: Partial<VitePWAOptions> = {
@@ -34,7 +35,19 @@ const pwaOptions: Partial<VitePWAOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), vitePWA(pwaOptions)],
+  plugins: [
+    react(),
+    vitePWA(pwaOptions),
+    AutoImport({
+      dts: true,
+      imports: [
+        'react',
+        {
+          'react-typewriter-hook': [['default', 'useTypeWriter']]
+        }
+      ]
+    })
+  ],
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src')
