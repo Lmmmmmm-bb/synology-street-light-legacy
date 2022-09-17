@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './index.module.scss';
+import { StyledLink, StyledImage, StyledParagraph } from './styled';
 
 interface IStreetLightProps {
   to: string;
@@ -12,19 +12,13 @@ const StreetLight: FC<IStreetLightProps> = (props) => {
   const { to, src, description } = props;
 
   return (
-    <a
-      className={styles.wrapper}
+    <StyledLink
       href={`http://${import.meta.env.VITE_ADDRESS}${to}`}
       title={description}
     >
-      <img
-        className={styles.image}
-        src={src}
-        alt={description}
-        draggable={false}
-      />
-      <p className={styles.description}>{description}</p>
-    </a>
+      <StyledImage src={src} alt={description} draggable={false} />
+      <StyledParagraph>{description}</StyledParagraph>
+    </StyledLink>
   );
 };
 

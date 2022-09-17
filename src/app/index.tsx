@@ -4,7 +4,13 @@ import Avatar from '/avatar.webp';
 import StreetLight from '~/components/street-light';
 import ReloadPrompt from '~/components/reload-prompt';
 
-import styles from './index.module.scss';
+import {
+  StyledAvatar,
+  StyledAvatarWrapper,
+  StyledGreetingWrapper,
+  StyledStreetLightWrapper,
+  StyledWrapper
+} from './styled';
 import { streetLightConfig } from './config';
 
 const App: FC = () => {
@@ -19,27 +25,21 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
-      <a
-        className={styles.avatarWrapper}
+    <StyledWrapper>
+      <StyledAvatarWrapper
         href={`http://${VITE_ADDRESS}:${VITE_PORT}`}
         title='Go to DSM'
       >
-        <img
-          alt='avatar'
-          className={styles.avatar}
-          src={Avatar}
-          draggable={false}
-        />
-      </a>
-      <p className={styles.greetingWrapper}>{retype}</p>
-      <div className={styles.streetLightWrapper}>
+        <StyledAvatar alt='avatar' src={Avatar} draggable={false} />
+      </StyledAvatarWrapper>
+      <StyledGreetingWrapper>{retype}</StyledGreetingWrapper>
+      <StyledStreetLightWrapper>
         {streetLightConfig.map((config, index) => (
           <StreetLight key={index} {...config} />
         ))}
-      </div>
+      </StyledStreetLightWrapper>
       <ReloadPrompt />
-    </div>
+    </StyledWrapper>
   );
 };
 
