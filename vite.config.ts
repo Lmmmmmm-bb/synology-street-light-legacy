@@ -39,7 +39,7 @@ export default defineConfig({
     react(),
     vitePWA(pwaOptions),
     AutoImport({
-      dts: true,
+      dts: './src/typings/auto-import.d.ts',
       imports: [
         'react',
         {
